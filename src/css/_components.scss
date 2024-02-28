@@ -1,0 +1,22 @@
+@use 'var';
+
+#intro-container {
+    button {
+        background-color: var.$accent-color;
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: darken(var.$accent-color, 20%);
+    }
+
+    button:active {
+        background-color: lighten(var.$accent-color, 20%);
+    }
+}
