@@ -1,7 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 #blur-bg {
     background-image: url(/src/images/bg-blur.jpg);
     background-size: cover;
-    background-position: center; /* För att placera bilden i mitten av body */
+    background-position: center; 
     background-repeat: no-repeat;
     height: 100vh;
 }
@@ -9,12 +18,19 @@
 header {
     display: flex;
     justify-content: space-between;
+    background-color: black;
+    
+
+    img {
+      width: 40%;
+      padding: 1.0em;
+    }
   }
 
 nav {
     font-size: 1.2em;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
     height: 100vh;
     width: 250px;
@@ -44,6 +60,7 @@ nav {
     a {
         text-decoration: none;
         padding: 0 1em;
+        color: white;
        }
   }
 
@@ -54,6 +71,7 @@ nav {
     cursor: pointer;
     border: none;
     border-radius: 10px;
+    background-color: black;
   }
 
 .open {
@@ -62,9 +80,10 @@ nav {
 
 .bars {
     display: block;
-    width: 20px;
+    width: 30px;
     height: 3px;
     margin: 5px 5px;
+    background-color: #106A9A;
   }
 
 .menu-text {
@@ -81,6 +100,7 @@ nav {
     transform: rotate(45deg);
     position: relative;
     top: 5px;
+    background-color: #106A9A;
   }
 
 .cross2 {
@@ -88,10 +108,11 @@ nav {
     transform: rotate(135deg);
     position: relative;
     top: -3px;
+    background-color: #106A9A;
   }
 
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 600px) {
   .menu-btn {
       display: none;
   }
@@ -102,7 +123,12 @@ nav {
 
   header {
       position: static;
-      height: 50px;
+      background-color: transparent;
+
+      img {
+        width: 25%;
+        margin-left: 5%;
+      }
   }
 
   nav {
@@ -113,7 +139,8 @@ nav {
       height: auto;
       font-size: 1.4em;
       width: auto;
-      margin-inline: auto;
+      margin: auto;
+      background-color: transparent;
 
       ul {
           height: 100%;
@@ -124,7 +151,22 @@ nav {
       li {
           display: inline;
           padding: 0.5em;
-          font-size: 16px;
+          font-size: 18px;
       }
+  }
+}
+
+@media only screen and (min-width: 700px) {
+
+  header {
+    img {
+      width: 23%
+    }
+  }
+
+  nav {
+    li {
+      font-size: 24px;
+    }
   }
 }
