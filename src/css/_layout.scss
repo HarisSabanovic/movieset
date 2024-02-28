@@ -1,17 +1,25 @@
+@use 'var';
+
 #intro-container {
     width: 70%;
-    margin-top: 10%;
+    margin-top: 8%;
     margin-inline: auto;
     text-align: center;
     color: white;
 
     h1{
-        font-size: 45px;
+        font-size: 40px;
+    }
+
+    @media only screen and (min-width: 600px){
+        h1 {
+            font-size: 50px;
+        }
     }
 
     span{
         position: relative;
-        color: #106A9A;
+        color: var.$accent-color;        ;
     }
 
     span::before{
@@ -21,7 +29,13 @@
         position: absolute;
         height: 50px;
         width: 2px;
-        background-color: #106A9A;
+        background-color: var.$accent-color;
         transform: translateY(-45%);
+    }
+
+    p{
+        max-width: 70ch;
+        margin-inline: auto;
+        padding: 1em;
     }
 }

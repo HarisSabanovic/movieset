@@ -1,3 +1,5 @@
+@use 'var';
+
 * {
   margin: 0;
   padding: 0;
@@ -82,7 +84,7 @@ nav {
     width: 30px;
     height: 3px;
     margin: 5px 5px;
-    background-color: #106A9A;
+    background-color: var.$accent-color;
   }
 
 .menu-text {
@@ -99,7 +101,7 @@ nav {
     transform: rotate(45deg);
     position: relative;
     top: 5px;
-    background-color: #106A9A;
+    background-color: var.$accent-color;
   }
 
 .cross2 {
@@ -107,7 +109,7 @@ nav {
     transform: rotate(135deg);
     position: relative;
     top: -3px;
-    background-color: #106A9A;
+    background-color: var.$accent-color;
   }
 
 
