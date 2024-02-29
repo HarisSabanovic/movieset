@@ -12,7 +12,7 @@
 #blur-bg {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)), url(/src/images/bg-blur.jpg);
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
@@ -37,6 +37,7 @@ nav {
     width: 250px;
     display: none;
     background-color: black;
+    z-index: 2;
 
     ul {
         width: 100%;
@@ -56,6 +57,9 @@ nav {
 
     li:hover {
         cursor: pointer;
+        background-color: var.$accent-color;
+        box-shadow:  20px 20px 60px #0e5a83,
+             -20px -20px 60px #127ab1;
       }
 
     a {
@@ -155,6 +159,11 @@ nav {
           display: inline;
           padding: 0.5em;
           font-size: 18px;
+      }
+
+      li:hover {
+        box-shadow: none;
+        background-color: transparent;
       }
   }
 }
