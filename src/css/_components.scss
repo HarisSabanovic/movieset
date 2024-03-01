@@ -20,3 +20,14 @@
         background-color: lighten(var.$accent-color, 20%);
     }
 }
+
+.search-container {
+    /*Sätt in en mixin här*/
+    button{
+        font-size: 20px;
+        outline: none;
+        background-color: var.$accent-color;
+        border: none;
+        color: white;
+    }
+}

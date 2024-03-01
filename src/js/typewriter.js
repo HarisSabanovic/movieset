@@ -1,6 +1,6 @@
 
 const dynamicText = document.querySelector("h1 span");
-const words = ["MOVIES", "TV-SHOWS", "ACTORS", "DIRECTORS"];
+const words = ["MOVIES", "SHOWS", "SERIES",];
 
 // Variables to track the position and deletion status of the word
 let wordIndex = 0;

@@ -45,12 +45,16 @@
 /*Explore page*/
 .container{
     width: 80%;
-    background-color: black;
     height: 300px;
-    border: 2px solid var.$accent-color;
     border-radius: 24px;
     margin-inline: auto;
     margin-top: 10%;
+}
+
+@media only screen and (min-width:600px) {
+    .container {
+        width: 60%;
+    }
 }
 
 .search-container{
@@ -63,21 +67,30 @@
         font-size: 20px;
         outline: none;
     }
-
-    /*Sätt in en mixin här*/
-    button{
-        font-size: 20px;
-        outline: none;
-        background-color: var.$accent-color;
-        border: none;
-        color: white;
-    }
+    
 }
 
 #result {
     color: white;
+    width: 100%;
+    background-color: darken(#808080, 43%);
 
     img {
-        width: 200px;
+        width: 150px;
+        padding: 10px;
+    }
+
+    .info {
+        display: flex;
+        width: 90%;
+        margin-inline: auto;
+        justify-content: center;
+        border-bottom: 2px solid darken(#808080, 36%);
+        padding: 10px;
+    }
+
+    .details {
+        padding: 10px;
+        width: 50%;
     }
 }
