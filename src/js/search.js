@@ -45,3 +45,19 @@ searchBtn.addEventListener("click", async () => {
     }
     
 }});
+
+async function DisplayWiki() {
+    let wikiInput = "Ksi"
+    const wikiUrl = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=500&srsearch=${wikiInput}`;
+
+    try {
+        const res = await fetch(wikiUrl);
+        const data = await res.json();
+
+        console.log(data.query.search[0].snippet);
+    } catch {
+        console.log("error");
+    }
+}
+
+DisplayWiki();
