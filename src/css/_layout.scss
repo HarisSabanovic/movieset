@@ -40,3 +40,44 @@
         padding: 1em;
     }
 }
+
+
+/*Explore page*/
+.container{
+    width: 80%;
+    background-color: black;
+    height: 300px;
+    border: 2px solid var.$accent-color;
+    border-radius: 24px;
+    margin-inline: auto;
+    margin-top: 10%;
+}
+
+.search-container{
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    gap: 1.2em;
+    padding: 20px;
+
+    input{
+        font-size: 20px;
+        outline: none;
+    }
+
+    /*Sätt in en mixin här*/
+    button{
+        font-size: 20px;
+        outline: none;
+        background-color: var.$accent-color;
+        border: none;
+        color: white;
+    }
+}
+
+#result {
+    color: white;
+
+    img {
+        width: 200px;
+    }
+}
