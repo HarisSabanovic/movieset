@@ -9,7 +9,7 @@ searchBtn.addEventListener("click", async () => {
     //let userInput = searchEl.value;
     let userInput = searchEl.value.trim();
     if(userInput !== ""){
-    const url = `http://www.omdbapi.com/?s=${userInput}&page=1&apikey=b69bb950`;
+    const url = `https://www.omdbapi.com/?s=${userInput}&page=1&apikey=b69bb950`;
 
     try{
         const response = await fetch(url);
