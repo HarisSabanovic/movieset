@@ -29,5 +29,7 @@
         background-color: var.$accent-color;
         border: none;
         color: white;
+        cursor: pointer;
+        animation: neon 1s forwards;
     }
 }
