@@ -45,17 +45,7 @@
 
 /*Explore page*/
 .container{
-    width: 80%;
-    height: 300px;
-    border-radius: 24px;
-    margin-inline: auto;
     margin-top: 10%;
-}
-
-@media only screen and (min-width:600px) {
-    .container {
-        width: 60%;
-    }
 }
 
 .search-container{
@@ -64,6 +54,9 @@
     gap: 1.2em;
     padding: 20px;
     animation: slideIn 0.5s forwards;
+    margin-inline: auto;
+    width: 90%;
+    justify-content: center;
 
     input{
         font-size: 20px;
@@ -72,14 +65,22 @@
     
 }
 
+@media only screen and (min-width:600px) {
+    .container {
+        width: 60%;
+    }
+}
+
+
+
 #result {
     color: white;
-    width: 100%;
+    width: 100vw;
     background-color: darken(#808080, 43%);
+    border-radius: 20px;
 
     img {
         width: 150px;
-        padding: 10px;
     }
 
     .info {
@@ -87,12 +88,24 @@
         width: 90%;
         margin-inline: auto;
         justify-content: center;
-        border-bottom: 2px solid darken(#808080, 36%);
         padding: 10px;
     }
 
     .details {
         padding: 10px;
-        width: 50%;
+        width: 80%;
+    }
+
+    .trailer{
+        width: 80%;
+        text-align: center;
+        margin-inline: auto;
+        text-align: left;
+    }
+
+    iframe{
+        max-width: 100%;
+        height: auto;
+        text-align: center;
     }
 }

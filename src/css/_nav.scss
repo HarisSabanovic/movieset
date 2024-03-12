@@ -9,6 +9,10 @@
   font-style: normal;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 #blur-bg {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)), url(/src/images/bg-blur.jpg);
     background-size: cover;
