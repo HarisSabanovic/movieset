@@ -3,6 +3,15 @@
     to { transform: translateY(0); }
 }
 
+@keyframes loading {
+    100% {
+        background-color: #52C386;
+        transform: translateY(-5rem);
+        scale: (2.0);
+    }
+
+}
+
 @keyframes btn-radius {
     from {
         border-radius: 1px;
@@ -59,13 +68,3 @@
 
 }
 
-@keyframes ripple {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(5);
-        opacity: 0;
-    }
-}

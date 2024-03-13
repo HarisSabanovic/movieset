@@ -109,3 +109,92 @@
         text-align: center;
     }
 }
+
+/*About sidan*/
+
+#loading {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #02030A;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loading--hidden {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+.ball{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var.$accent-color;
+    animation: loading 0.8s ease-in-out infinite alternate;
+}
+
+@for $i from 1 through 5 {
+    .ball:nth-child(#{$i}) {
+        animation-delay: $i * 0.1s ;
+    }
+}
+
+
+body{
+    background-color: #02030A;
+    color: white;
+}
+
+
+svg:hover{
+    cursor: pointer;
+}
+
+.light-theme{
+    background-color: #F5F5F5;
+    color: #02030A;
+}
+
+.light-theme header {
+    background-color: #F5F5F5; 
+}
+
+
+
+.light-theme header a { 
+    color: var.$accent-color; 
+}
+
+
+.about-container {
+    margin-left: 10%;
+    margin-right: 10px;
+    margin-top: 5%;
+}
+
+.about-container h1{
+    font-size: 80px;
+}
+
+.about-container p{
+    max-width: 70ch;
+    line-height: 1.6em;
+}
+
+.light-theme #logo {
+    fill: #02030A; 
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70ch;
+    margin-left: 10%;
+    margin-top: 5%;
+}
