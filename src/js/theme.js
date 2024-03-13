@@ -9,3 +9,7 @@ function toggleTheme() {
     let body = document.body;
     body.classList.toggle("light-theme");
 }
+
+window.addEventListener("load", () => {
+    document.querySelector(".loading").classList.add("loading--hidden");
+});
