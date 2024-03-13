@@ -12,12 +12,12 @@
 </head>
 <body>
 
-    <div class="loading">
-        <div class="ball"></div>
-        <div class="ball"></div>
-        <div class="ball"></div>
-        <div class="ball"></div>    
-        <div class="ball"></div>
+    <div class="loading loading--hidden">
+        <div class="ball loading--hidden"></div>
+        <div class="ball loading--hidden"></div>
+        <div class="ball loading--hidden"></div>
+        <div class="ball loading--hidden"></div>    
+        <div class="ball loading--hidden"></div>
       </div>
 
     
@@ -69,13 +69,15 @@
     <script>
         "use strict";
 
-        let toggleBtn = document.getElementById("toggleThemeBtn");
+        document.addEventListener('DOMContentLoaded', function() {
+            let toggleBtn = document.getElementById("toggleThemeBtn");
         toggleBtn.addEventListener("click", toggleTheme);
 
         function toggleTheme() {
             let body = document.body;
             body.classList.toggle("light-theme");
         }
+       });
     </script>
 </body>
 </html>
