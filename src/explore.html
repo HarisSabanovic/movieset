@@ -12,7 +12,7 @@
     <script src="js/search.js" type="module"></script>
 </head>
 <body id="blur-bg">
-    <header>
+    <header id="header">
 
         <img src="images/movieset-high-resolution-logo-transparent(1).png" alt="movieset logotyp" onclick="returnHome()" style="cursor: pointer;">
         <button class="menu-btn open" id="open-menu">
@@ -34,8 +34,8 @@
             </button>
 
             <ul>
-                <li><a href="index.html"><strong>Startsida</strong></a></li>
-                <li><a href="explore.html"><strong>Explore</strong></a></li>
+                <li><a href="index.html"><strong>Home</strong></a></li>
+                <li><a href="explore.html"><strong>Search</strong></a></li>
                 <li><a href="about.html"><strong>About us</strong></a></li>
             </ul>
         </nav>
@@ -43,6 +43,8 @@
 
 
     <main>
+
+        <h1 id="search-header">SEARCH</h1>
         <div class="container">
             <div class="search-container">
                 <input type="text" placeholder="Search here..." id="movie-input">

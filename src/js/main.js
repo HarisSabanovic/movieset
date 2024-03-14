@@ -6,6 +6,18 @@ let animationBtn = document.getElementById("animation-bt");
 openBtn.addEventListener("click", toggleMenu);
 closeBtn.addEventListener("click", toggleMenu);
 
+// scroll effekt för navigation
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('header');
+    const scrollPosition = window.scrollY;
+    
+    // Change background color when scrolling down
+    if (scrollPosition > 50) {
+      header.style.backgroundColor = 'rgba(0, 0, 0, 0.9)'; 
+    } else {
+      header.style.backgroundColor = 'transparent'; 
+    }
+  });
 
 function toggleMenu() {
     let navMenuEl = document.getElementById("nav-menu");
@@ -21,6 +33,4 @@ function toggleMenu() {
 
 }
 
-function returnHome() {
-    window.location.href = "index.html";
-}
+
