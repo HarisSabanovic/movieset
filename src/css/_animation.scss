@@ -25,6 +25,13 @@
     }
 }
 
+@keyframes vanish {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 @keyframes loading {
     100% {
         background-color: #52C386;
