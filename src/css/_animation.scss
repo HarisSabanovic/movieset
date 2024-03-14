@@ -3,6 +3,28 @@
     to { transform: translateY(0); }
 }
 
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(+100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 @keyframes loading {
     100% {
         background-color: #52C386;
@@ -57,7 +79,6 @@
 @keyframes neon {
     0%{
         box-shadow: 0 0;
-        border-radius: 2px
     };
 
     100%{
@@ -68,3 +89,15 @@
 
 }
 
+@keyframes growAndGlow {
+    0% {
+        transform: scale(1);
+        border-width: 1px;
+        box-shadow: none;
+    }
+    100% {
+        transform: scale(1.1); 
+        border-width: 4px; 
+        box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.7); /* Glow effect */
+    }
+}

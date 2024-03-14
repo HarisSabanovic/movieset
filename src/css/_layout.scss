@@ -18,6 +18,20 @@
         }
     }
 
+    @media only screen and (max-width: 350px){
+
+        #intro-container {
+            margin-top: 10%;
+        }
+        h1 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
     span{
         position: relative;
         z-index: 1;
@@ -44,8 +58,15 @@
 
 
 /*Explore page*/
+#search-header{
+    margin-top: 6%;
+    text-align: center;
+    font-size: 50px;
+}
 .container{
-    margin-top: 10%;
+    margin-top: 20px;
+    width: 70%;
+    margin-inline: auto;
 }
 
 .search-container{
@@ -53,7 +74,7 @@
     grid-template-columns: 6fr 3fr;
     gap: 1.2em;
     padding: 20px;
-    animation: slideIn 0.5s forwards;
+    animation: slideInFromLeft 1.0s forwards;
     margin-inline: auto;
     width: 90%;
     justify-content: center;
@@ -61,6 +82,7 @@
     input{
         font-size: 20px;
         outline: none;
+        height: 45px;
     }
     
 }
@@ -75,38 +97,53 @@
 
 #result {
     color: white;
-    width: 100vw;
-    background-color: darken(#808080, 43%);
+    background-color: #02030A;
+    width: 100%;
     border-radius: 20px;
+    
 
     img {
         width: 150px;
+        max-width: 100%;
     }
 
     .info {
         display: flex;
-        width: 90%;
+        gap: 10px; /* Gap between grid items */
+        width: 100%;
         margin-inline: auto;
         justify-content: center;
         padding: 10px;
+        background-color: darken(#808080, 43%);
+        margin-bottom: 20px;
+        border: 1px var.$accent-color solid;
+        border-radius: 10px;
+        transition: transform 0.9s ease, border-width 0.9s ease, box-shadow 0.9s ease;
+    }
+
+    .info:hover {
+        transition: border-width 0.3s; /* Smooth transition for border-width change */
+        animation: growAndGlow 1.3s forwards; /* Apply the animation */
     }
 
     .details {
         padding: 10px;
-        width: 80%;
+        width: 100%;
     }
 
     .trailer{
-        width: 80%;
+        width: 100%;
         text-align: center;
         margin-inline: auto;
-        text-align: left;
-    }
+        padding: 10px;
+        }
 
     iframe{
         max-width: 100%;
-        height: auto;
+        height: 200px;
         text-align: center;
+        border-radius: 10px;
+        border: 1px white solid;
     }
 }
 
