@@ -3,6 +3,13 @@ let openBtn = document.getElementById("open-menu");
 let closeBtn = document.getElementById("close-menu");
 let animationBtn = document.getElementById("animation-bt");
 
+let loader = document.querySelector(".loading");
+window.addEventListener("load", vanished);
+
+function vanished() {
+     loader.classList.add("loading--hidden");
+}
+
 openBtn.addEventListener("click", toggleMenu);
 closeBtn.addEventListener("click", toggleMenu);
 
@@ -32,5 +39,7 @@ function toggleMenu() {
     }
 
 }
+
+
 
 
