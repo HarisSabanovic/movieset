@@ -7,9 +7,18 @@ toggleBtn.addEventListener("click", toggleTheme);
 
 function toggleTheme() {
     let body = document.body;
-    body.classList.toggle("light-theme");
-}
+    const socialMediaIcons = document.querySelectorAll('.icons a svg');
 
-window.addEventListener("load", () => {
-    document.querySelector(".loading").classList.add("loading--hidden");
-});
+    socialMediaIcons.forEach(icon => {
+        icon.classList.toggle("light-theme");
+    });
+
+    body.classList.toggle("light-theme");
+};
+
+let loader = document.querySelector(".loading");
+window.addEventListener("load", vanished);
+
+function vanished() {
+     loader.classList.add("loading--hidden");
+}
