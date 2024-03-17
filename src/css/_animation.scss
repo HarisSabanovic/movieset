@@ -1,6 +1,10 @@
 @keyframes slideIn {
-    from { transform: translateY(-50px); }
-    to { transform: translateY(0); }
+    from { 
+        transform: translateY(-50px); 
+    }
+    to { 
+        transform: translateY(0); 
+    }
 }
 
 @keyframes slideInFromLeft {
@@ -41,47 +45,6 @@
 
 }
 
-@keyframes btn-radius {
-    from {
-        border-radius: 1px;
-    };
-
-    to {
-        border-radius: 3px;
-    };
-
-    to {
-        border-radius: 6px;
-    };
-
-    to {
-        border-radius: 8px;
-    };
-
-    to {
-        border-radius: 10px;
-    };
-
-    to {
-        border-radius: 12px;
-    };
-
-    to {
-        border-radius: 14px;
-    };
-
-    to {
-        border-radius: 16px;
-    };
-
-    to {
-        border-radius: 18px;
-    };
-
-    to {
-        border-radius: 20px;
-    };
-}
 
 @keyframes neon {
     0%{
@@ -95,6 +58,32 @@
     };
 
 }
+
+@keyframes pulsating {
+    0%{
+        opacity: 0%;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes neonBtn {
+    0%{
+        box-shadow: 0 0 20px;
+        filter: brightness(150%);
+        border-radius: 10px;
+    };
+
+    100%{
+        box-shadow: 0 0 40px;
+        filter: brightness(150%);
+        border-radius: 20px;
+    };
+
+}
+
 
 @keyframes growAndGlow {
     0% {
