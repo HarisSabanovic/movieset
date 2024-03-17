@@ -6,7 +6,7 @@
     margin-top: 8%;
     margin-inline: auto;
     text-align: center;
-    color: white;
+    color: var.$white-text;
 
     h1{
         font-size: 35px;
@@ -18,7 +18,7 @@
         }
     }
 
-    @media only screen and (max-width: 350px){
+    @media only screen and (max-width: 450px){
 
         #intro-container {
             margin-top: 10%;
@@ -29,6 +29,10 @@
 
         p {
             font-size: 14px;
+        }
+
+        span::before{
+            display: none;
         }
     }
 
@@ -46,7 +50,8 @@
         height: 50px;
         width: 2px;
         background-color: var.$accent-color;
-        transform: translateY(-45%);
+        transform: translateY(-45%); //sätter den i rätt position
+        animation: pulsating 0.5s infinite alternate;
     }
 
     p{
@@ -55,6 +60,21 @@
         padding: 1em;
     }
 }
+
+@media only screen and (max-width: 750px) {
+
+    #intro-container {
+        margin-top: 10%;
+    
+    h1 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+   }
+  }
 
 
 /*Explore page*/
@@ -65,24 +85,29 @@
 }
 .container{
     margin-top: 20px;
-    width: 70%;
+    width: 90%;
     margin-inline: auto;
 }
 
 .search-container{
     display: grid;
     grid-template-columns: 6fr 3fr;
-    gap: 1.2em;
-    padding: 20px;
+    gap: 1em;
+    padding: 10px;
     animation: slideInFromLeft 1.0s forwards;
     margin-inline: auto;
-    width: 90%;
+    width: 100%;
     justify-content: center;
 
     input{
         font-size: 20px;
         outline: none;
         height: 45px;
+        width: 100%;
+    }
+
+    button {
+        padding: 0px !important;
     }
     
 }
@@ -95,8 +120,9 @@
 
 
 
+
 #result {
-    color: white;
+    color: var.$white-text;
     background-color: #02030A;
     width: 100%;
     border-radius: 20px;
@@ -147,6 +173,28 @@
     }
 }
 
+@media only screen and (max-width:1000px) {
+    .info {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr; 
+        grid-gap: 20px; 
+    }
+    
+    .details {
+        grid-column: span 1 !important; 
+    }
+
+    img {
+        grid-column: span 1 !important; 
+        height: auto;
+    }
+    
+    .trailer {
+        grid-column: span 2 !important; 
+    }
+}
+
+
 /*About sidan*/
 
 .loading {
@@ -174,10 +222,24 @@
     animation: loading 0.8s ease-in-out infinite alternate;
 }
 
-@for $i from 1 through 5 {
-    .ball:nth-child(#{$i}) {
-        animation-delay: $i * 0.1s ;
-    }
+.ball:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.ball:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.ball:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.ball:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.ball:nth-child(5) {
+    animation-delay: 0.5s;
 }
 
 
@@ -190,6 +252,7 @@ body{
 svg:hover{
     cursor: pointer;
 }
+
 
 .light-theme{
     background-color: #F5F5F5;
@@ -206,30 +269,51 @@ svg:hover{
     color: var.$accent-color; 
 }
 
+.light-theme .open { 
+    background-color: white;
+}
+
 
 .about-container {
-    margin-left: 10%;
+    margin-left: 5%;
     margin-right: 10px;
     margin-top: 5%;
 }
 
 .about-container h1{
     font-size: 80px;
+    animation: slideInFromRight 1.0s forwards;
 }
 
 .about-container p{
     max-width: 70ch;
     line-height: 1.6em;
+    animation: slideInFromLeft 1.5s forwards;
 }
 
 .light-theme .logo {
     fill: #02030A; 
 }
 
+
 .icons {
     display: flex;
     justify-content: space-between;
     max-width: 70ch;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-top: 5%;
+    animation: slideInFromLeft 1.7s forwards;
 }
+
+@media only screen and (max-width:400px) {
+    .icons {
+        width: 40ch;
+    }
+}
+
+@media only screen and (max-width:300px) {
+    .icons {
+        width: 30ch !important;
+    }
+}
+

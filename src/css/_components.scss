@@ -1,15 +1,19 @@
 @use 'var';
 
-#intro-container {
-    button {
+@mixin blue-button{
         background-color: var.$accent-color;
         border: none;
-        color: white;
+        color: var.$white-text;
         padding: 10px 30px;
         border-radius: 10px;
         font-size: 16px;
         font-weight: bold;
         cursor: pointer;
+}
+
+#intro-container {
+    button {
+        @include blue-button;
     }
 
     button:hover {
@@ -24,12 +28,32 @@
 .search-container {
     /*Sätt in en mixin här*/
     button{
+        @include blue-button;
         font-size: 20px;
         outline: none;
         background-color: var.$accent-color;
         border: none;
-        color: white;
-        cursor: pointer;
-        animation: neon 1s forwards;
+        box-shadow: 0 0 20px;
+        filter: brightness(150%);
+
     }
+
+    button:hover {
+        animation: neonBtn 0.8s infinite alternate;
+    }
+}
+
+/*About sidan*/
+#toggleThemeBtn {
+    border-radius: 45%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+#toggleThemeBtn:hover {
+    border-radius: 45%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
 }
