@@ -6,19 +6,22 @@ let animationBtn = document.getElementById("animation-bt");
 let loader = document.querySelector(".loading");
 window.addEventListener("load", vanished);
 
-function vanished() {
-     loader.classList.add("loading--hidden");
-}
 
+
+window.addEventListener("load", vanished);
 openBtn.addEventListener("click", toggleMenu);
 closeBtn.addEventListener("click", toggleMenu);
+
+function vanished() {
+    loader.classList.add("loading--hidden");
+}
 
 // scroll effekt för navigation
 window.addEventListener('scroll', function() {
     const header = document.getElementById('header');
     const scrollPosition = window.scrollY;
     
-    // Change background color when scrolling down
+    // Ändrar bakgrundsfärg när man scrollar ner längre än 50px
     if (scrollPosition > 50) {
       header.style.backgroundColor = 'rgba(0, 0, 0, 0.9)'; 
     } else {
