@@ -51,7 +51,7 @@
         width: 2px;
         background-color: var.$accent-color;
         transform: translateY(-45%); //sätter den i rätt position
-        animation: pulsating 0.5s infinite alternate;
+        animation: pulsating 0.7s infinite ;
     }
 
     p{
@@ -166,7 +166,6 @@
 
     iframe{
         max-width: 100%;
-        height: 200px;
         text-align: center;
         border-radius: 10px;
         border: 1px white solid;
