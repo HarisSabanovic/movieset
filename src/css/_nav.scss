@@ -28,6 +28,7 @@ header {
 
     img {
       width: 40%;
+      height: auto;
       padding: 1.0em;
     }
   }
@@ -68,14 +69,30 @@ nav {
 
     a {
         text-decoration: none;
-        padding: 0 1em;
-        color: white;
+        padding: 10px 1em;
+        color: var.$white-text;
+        position: relative;
        }
+    
+    a:after {
+      content: "";
+      position: absolute;
+      background-color: var.$accent-color;
+      height: 3px;
+      width: 0;
+      left: 0;
+      bottom: 0;
+    }
 
-       #logo{
+    a:hover:after{
+      width: 100%;
+      transition: 0.5s;
+    }
+
+    #logo{
         padding: 0;
         width: 20%;
-       }
+    }
   }
 
 .menu-btn {
@@ -194,6 +211,7 @@ nav {
     }
   }
 }
+
 
 @media only screen and (max-width: 600px) {
 
