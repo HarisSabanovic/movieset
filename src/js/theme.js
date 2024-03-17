@@ -15,10 +15,3 @@ function toggleTheme() {
 
     body.classList.toggle("light-theme");
 };
-
-let loader = document.querySelector(".loading");
-window.addEventListener("load", vanished);
-
-function vanished() {
-     loader.classList.add("loading--hidden");
-}
